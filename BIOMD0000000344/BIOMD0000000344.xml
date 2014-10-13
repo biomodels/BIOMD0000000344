@@ -1,0 +1,3451 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" metaid="_7496606c-dc2a-451d-a49a-fd2b3c6bdf46" version="4">
+  <model id="Hsp70Model" name="Proctor2011_ProteinHomeostasis_NormalCondition" metaid="_840067">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+      This model is from the article:
+      <br/>
+        <strong> Modelling the Role of the Hsp70/Hsp90 System in the Maintenance of Protein Homeostasis
+</strong>
+        <br/>
+Proctor CJ,  Lorimer IAJ
+      <em>PLoS ONE</em>2011; 6(7): e22038.
+      <a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0022038">doi:10.1371/journal.pone.0022038</a>,
+      <br/>
+        <strong>Abstract:</strong>
+        <br/>
+Neurodegeneration is an age-related disorder which is characterised by the accumulation of aggregated protein and neuronal cell death. There are many different neurodegenerative diseases which are classified according to the specific proteins involved and the regions of the brain which are affected. Despite individual differences, there are common mechanisms at the sub-cellular level leading to loss of protein homeostasis. The two central systems in protein homeostasis are the chaperone system, which promotes correct protein folding, and the cellular proteolytic system, which degrades misfolded or damaged proteins. Since these systems and their interactions are very complex, we use mathematical modelling to aid understanding of the processes involved. The model developed in this study focuses on the role of Hsp70 (IPR00103) and Hsp90 (IPR001404) chaperones in preventing both protein aggregation and cell death. Simulations were performed under three different conditions: no stress; transient stress due to an increase in reactive oxygen species; and high stress due to sustained increases in reactive oxygen species. The model predicts that protein homeostasis can be maintained during short periods of stress. However, under long periods of stress, the chaperone system becomes overwhelmed and the probability of cell death pathways being activated increases. Simulations were also run in which cell death mediated by the JNK (P45983) and p38 (Q16539) pathways was inhibited. The model predicts that inhibiting either or both of these pathways may delay cell death but does not stop the aggregation process and that eventually cells die due to aggregated protein inhibiting proteasomal function. This problem can be overcome if the sequestration of aggregated protein into inclusion bodies is enhanced. This model predicts responses to reactive oxygen species-mediated stress that are consistent with currently available experimental data. The model can be used to assess specific interventions to reduce cell death due to impaired protein homeostasis.
+   </p>
+        <p>
+          <b>Note:</b>
+        </p>
+        <p> Simulations were performed under three different conditions: 1) normal condition (no stress), 2) moderate stress due to an increase in reactive oxygen species (ROS) i.e. ROS levels were increased by a factor of 4 at time=4hours for a period of 1 hour (not 2 hours as mentioned in the figure 5 legend of the reference publication. This is a typo in the paper and is clarified by the author) and 3) high stress due to sustained increase in reactive oxygen species (ROS) (here ROS increases with time).</p>
+        <p> The model that corresponds to the normal condition is submitted as a main model in the BioModels Database. The other two models, that corresponds to the moderate stress conditions and high stress conditions are available in SBML format as supporting files [go to Curation tab].</p>
+        <p> Supplementary figures S3 (normal condition), S4 (moderate stress condition) and S6 (high stress condition) are reproduced here. </p>
+      </body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840067">
+	<dc:creator>
+	<rdf:Bag>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Chelliah</vCard:Family>
+	<vCard:Given>Vijayalakshmi</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>viji@ebi.ac.uk</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>EMBL-EBI</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Proctor</vCard:Family>
+	<vCard:Given>Carole J</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>c.j.proctor@newcastle.ac.uk</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>Centre for Integrated Systems Biology of Ageing and Nutrition, Institute for Ageing and Health, Newcastle University, UK</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	</rdf:Bag>
+	</dc:creator>
+	<dcterms:created rdf:parseType="Resource">
+	<dcterms:W3CDTF>2011-07-21T16:40:43Z</dcterms:W3CDTF>
+	</dcterms:created>
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2014-10-10T11:21:13Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqmodel:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1005280000"/>
+	</rdf:Bag>
+	</bqmodel:is>
+	<bqmodel:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/BIOMD0000000344"/>
+	</rdf:Bag>
+	</bqmodel:is>
+	<bqmodel:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/21779370"/>
+	</rdf:Bag>
+	</bqmodel:isDescribedBy>
+	<bqmodel:isDerivedFrom>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/BIOMD0000000091"/>
+	</rdf:Bag>
+	</bqmodel:isDerivedFrom>
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0042592"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070841"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006915"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0003773"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0051085"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	<bqbiol:hasTaxon>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/taxonomy/7711"/>
+	</rdf:Bag>
+	</bqbiol:hasTaxon>
+	<bqbiol:hasProperty>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/mamo/MAMO_0000046"/>
+	</rdf:Bag>
+	</bqbiol:hasProperty>
+	<bqbiol:hasProperty>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doid/DOID:1289"/>
+	</rdf:Bag>
+	</bqbiol:hasProperty>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <listOfUnitDefinitions>
+      <unitDefinition id="substance" metaid="_7c4fe7ac-0e78-46a7-a3ca-495f7a9b10ec">
+        <listOfUnits>
+          <unit metaid="e29164d1-d085-42a8-a2b8-3852f67a35b5" kind="item"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="cytosol" metaid="_840070" sboTerm="SBO:0000290" size="1">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840070">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0005829"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </compartment>
+      <compartment id="nucleus" metaid="_840071" sboTerm="SBO:0000290" size="1">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840071">
+	<bqmodel:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0005634"/>
+	</rdf:Bag>
+	</bqmodel:is>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="NatP" initialAmount="17600" hasOnlySubstanceUnits="true" metaid="_840073" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840073">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="MisP" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840074" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840074">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsp70" initialAmount="1400" hasOnlySubstanceUnits="true" metaid="_840075" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840075">
+	<bqbiol:isPartOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001023"/>
+	</rdf:Bag>
+	</bqbiol:isPartOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsp90" initialAmount="1850" hasOnlySubstanceUnits="true" metaid="_840076" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840076">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001404"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsp70_dam" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840077" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840077">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001023"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsp90_dam" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840079" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840079">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001404"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsp90_Proteasome" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840080" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840080">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001023"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0000502"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsp70_Proteasome" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840081" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840081">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001404"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0000502"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsp70Client" initialAmount="490" hasOnlySubstanceUnits="true" metaid="_840082" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840082">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsp90Client" initialAmount="590" hasOnlySubstanceUnits="true" metaid="_840084" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840084">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsp70_Hsp70Client" initialAmount="10" hasOnlySubstanceUnits="true" metaid="_840085" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840085">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001023"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsp90_Hsp90Client" initialAmount="10" hasOnlySubstanceUnits="true" metaid="_840086" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840086">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001404"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Akt" initialAmount="340" hasOnlySubstanceUnits="true" metaid="_840088" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840088">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/P31749"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Akt_Hsp90" initialAmount="30" hasOnlySubstanceUnits="true" metaid="_840089" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840089">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/P31749"/>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001404"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="CHIP" initialAmount="255" hasOnlySubstanceUnits="true" metaid="_840090" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840090">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/Q9UNE7"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Akt_CHIP_Hsp90" initialAmount="80" hasOnlySubstanceUnits="true" metaid="_840092" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840092">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/P31749"/>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/Q9UNE7"/>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001404"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Akt_Proteasome" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840093" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840093">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/P31749"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0000502"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsf1" initialAmount="5" hasOnlySubstanceUnits="true" metaid="_840094" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840094">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/Q00613"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsf1_Hsp90" initialAmount="95" hasOnlySubstanceUnits="true" metaid="_840096" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840096">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/Q00613"/>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001404"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsp90_MisP" initialAmount="470" hasOnlySubstanceUnits="true" metaid="_840097" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840097">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001023"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsp70_MisP" initialAmount="410" hasOnlySubstanceUnits="true" metaid="_840098" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840098">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001404"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsf1_Hsf1_Hsf1" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840100" sboTerm="SBO:0000297" compartment="nucleus">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840100">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/Q00613"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsf1_Hsf1_Hsf1_P" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840101" sboTerm="SBO:0000297" compartment="nucleus">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840101">
+              <bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00562"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/Q00613"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsf1_Hsf1" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840102" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840102">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/Q00613"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="HSEHsp70" initialAmount="2" hasOnlySubstanceUnits="true" metaid="_840103" sboTerm="SBO:0000369" compartment="nucleus"/>
+      <species id="HSEHsp90" initialAmount="2" hasOnlySubstanceUnits="true" metaid="_840105" sboTerm="SBO:0000369" compartment="nucleus"/>
+      <species id="HSEHsp70_Hsf1_Hsf1_Hsf1" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840106" sboTerm="SBO:0000297" compartment="nucleus">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840106">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0043234"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="HSEHsp70_Hsf1_Hsf1_Hsf1_P" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840107" sboTerm="SBO:0000297" compartment="nucleus">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840107">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00562"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0043234"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="HSEHsp90_Hsf1_Hsf1_Hsf1" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840109" sboTerm="SBO:0000297" compartment="nucleus">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840109">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0043234"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="HSEHsp90_Hsf1_Hsf1_Hsf1_P" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840110" sboTerm="SBO:0000297" compartment="nucleus">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840110">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00562"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0043234"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Jnk" initialAmount="100" hasOnlySubstanceUnits="true" metaid="_840111" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840111">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/P45983"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Jnk_P" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840113" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840113">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/P45983"/>
+	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00562"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Ppx" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840114" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840114">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0008287"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Mkp1" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840115" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840115">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/P28562"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Mkp1_P" initialAmount="100" hasOnlySubstanceUnits="true" metaid="_840117" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840117">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/P28562"/>
+	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00562"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Mkp1_Proteasome" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840118" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840118">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/P28562"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0000502"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Hsp70_Ppx" initialAmount="100" hasOnlySubstanceUnits="true" metaid="_840119" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840119">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR001023"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0008287"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Pkc" initialAmount="100" hasOnlySubstanceUnits="true" metaid="_840121" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840121">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR012233"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="p38" initialAmount="100" hasOnlySubstanceUnits="true" metaid="_840122" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840122">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/Q16539"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="p38_P" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840123" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840123">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/Q16539"/>
+	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00562"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Proteasome" initialAmount="500" hasOnlySubstanceUnits="true" metaid="_840125" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840125">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0000502"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="MisP_Proteasome" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840126" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840126">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0000502"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="AggP" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840127" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840127">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="SeqAggP" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840129" sboTerm="SBO:0000252" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840129">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="AggP_Proteasome" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840130" sboTerm="SBO:0000297" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840130">
+	<bqbiol:hasPart>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0000502"/>
+	</rdf:Bag>
+	</bqbiol:hasPart>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="ROS" initialAmount="10" hasOnlySubstanceUnits="true" metaid="_840131" sboTerm="SBO:0000247" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840131">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:26523"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="ATP" initialAmount="10000" hasOnlySubstanceUnits="true" metaid="_840132" boundaryCondition="true" sboTerm="SBO:0000247" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840132">
+	<bqbiol:isPartOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15422"/>
+	</rdf:Bag>
+	</bqbiol:isPartOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="ADP" initialAmount="1000" hasOnlySubstanceUnits="true" metaid="_840134" boundaryCondition="true" sboTerm="SBO:0000247" compartment="cytosol">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840134">
+	<bqbiol:isPartOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16761"/>
+	</rdf:Bag>
+	</bqbiol:isPartOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species id="Source" initialAmount="1" hasOnlySubstanceUnits="true" metaid="_840135" boundaryCondition="true" sboTerm="SBO:0000291" compartment="cytosol"/>
+      <species id="Sink" initialAmount="1" hasOnlySubstanceUnits="true" metaid="_840136" boundaryCondition="true" sboTerm="SBO:0000291" compartment="cytosol"/>
+      <species id="p38Death" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840138" sboTerm="SBO:0000236" compartment="cytosol"/>
+      <species id="JNKDeath" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840139" sboTerm="SBO:0000236" compartment="cytosol"/>
+      <species id="PIDeath" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840140" sboTerm="SBO:0000236" compartment="cytosol"/>
+      <species id="CellDeath" initialAmount="0" hasOnlySubstanceUnits="true" metaid="_840142" sboTerm="SBO:0000236" compartment="cytosol"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="ksynNatP" metaid="_840351" value="0.042" sboTerm="SBO:0000009"/>
+      <parameter id="kmisfold" metaid="_840352" value="2E-6" sboTerm="SBO:0000009"/>
+      <parameter id="kbinMisPProt" metaid="_840353" value="1E-7" sboTerm="SBO:0000009"/>
+      <parameter id="kdegMisP" metaid="_840354" value="0.01" sboTerm="SBO:0000009"/>
+      <parameter id="kagg" metaid="_840356" value="1E-8" sboTerm="SBO:0000009"/>
+      <parameter id="kseqagg" metaid="_840357" value="7E-7" sboTerm="SBO:0000009"/>
+      <parameter id="kbinAggPProt" metaid="_840358" value="1E-5" sboTerm="SBO:0000009"/>
+      <parameter id="kbinHspMisp" metaid="_840360" value="8E-6" sboTerm="SBO:0000009"/>
+      <parameter id="krelHspMisp" metaid="_840361" value="8E-5" sboTerm="SBO:0000009"/>
+      <parameter id="krefold" metaid="_840362" value="0.00055" sboTerm="SBO:0000009"/>
+      <parameter id="kbinHsf1Hsp90" constant="false" metaid="_840364" value="0.02" sboTerm="SBO:0000009"/>
+      <parameter id="krelHsf1Hsp90" metaid="_840365" value="0.5" sboTerm="SBO:0000009"/>
+      <parameter id="kdimerHsf1" metaid="_840366" value="8E-5" sboTerm="SBO:0000009"/>
+      <parameter id="ktrimerHsf1" metaid="_840368" value="0.01" sboTerm="SBO:0000009"/>
+      <parameter id="kdetrimerHsf1" metaid="_840369" value="0.5" sboTerm="SBO:0000009"/>
+      <parameter id="kdedimerHsf1" metaid="_840370" value="0.5" sboTerm="SBO:0000009"/>
+      <parameter id="kbinHSEHsf1" metaid="_840372" value="0.05" sboTerm="SBO:0000009"/>
+      <parameter id="krelHSEHsf1" metaid="_840373" value="0.08" sboTerm="SBO:0000009"/>
+      <parameter id="kupregHsp" metaid="_840374" value="0.2" sboTerm="SBO:0000009"/>
+      <parameter id="kbasalsynHsp70" metaid="_840376" value="0.008" sboTerm="SBO:0000009"/>
+      <parameter id="kbasalsynHsp90" metaid="_840377" value="0.008" sboTerm="SBO:0000009"/>
+      <parameter id="kbinHsp70Prot" metaid="_840378" value="1.2E-8" sboTerm="SBO:0000009"/>
+      <parameter id="kbinHsp90Prot" metaid="_840380" value="1E-8" sboTerm="SBO:0000009"/>
+      <parameter id="kdegHsp70" metaid="_840381" value="0.01" sboTerm="SBO:0000009"/>
+      <parameter id="kdegHsp90" metaid="_840382" value="0.01" sboTerm="SBO:0000009"/>
+      <parameter id="kgenROS" constant="false" metaid="_840384" value="0.01" sboTerm="SBO:0000009"/>
+      <parameter id="kremROS" metaid="_840385" value="0.001" sboTerm="SBO:0000009"/>
+      <parameter id="kbinHsp70client" metaid="_840386" value="0.0002" sboTerm="SBO:0000009"/>
+      <parameter id="krelHsp70client" metaid="_840388" value="5" sboTerm="SBO:0000009"/>
+      <parameter id="kbinHsp90client" metaid="_840389" value="0.0002" sboTerm="SBO:0000009"/>
+      <parameter id="krelHsp90client" constant="false" metaid="_840390" value="5" sboTerm="SBO:0000009"/>
+      <parameter id="kphosJnk" metaid="_840392" value="0.02" sboTerm="SBO:0000009"/>
+      <parameter id="kdephosJnkMkp1" metaid="_840393" value="0.05" sboTerm="SBO:0000009"/>
+      <parameter id="kbinHsp70Ppx" metaid="_840394" value="0.2" sboTerm="SBO:0000009"/>
+      <parameter id="krelHsp70Ppx" metaid="_840396" value="5" sboTerm="SBO:0000009"/>
+      <parameter id="kphosHsf1" metaid="_840397" value="0.03" sboTerm="SBO:0000009"/>
+      <parameter id="kdephosHsf1" metaid="_840398" value="0.01" sboTerm="SBO:0000009"/>
+      <parameter id="kbinHSEPhosTriH" metaid="_840400" value="0.1" sboTerm="SBO:0000009"/>
+      <parameter id="krelHSEPhosTriH" metaid="_840401" value="0.08" sboTerm="SBO:0000009"/>
+      <parameter id="kphosp38" metaid="_840402" value="0.02" sboTerm="SBO:0000009"/>
+      <parameter id="kdephosp38Mkp1" metaid="_840404" value="0.05" sboTerm="SBO:0000009"/>
+      <parameter id="kgenROSAggP" metaid="_840405" value="1E-6" sboTerm="SBO:0000009"/>
+      <parameter id="ksynAkt" metaid="_840406" value="0.0015" sboTerm="SBO:0000009"/>
+      <parameter id="kbinAktHsp90" metaid="_840408" value="0.00037" sboTerm="SBO:0000009"/>
+      <parameter id="krelAktHsp90" constant="false" metaid="_840409" value="7" sboTerm="SBO:0000009"/>
+      <parameter id="kbinAktProt" metaid="_840410" value="6E-8" sboTerm="SBO:0000009"/>
+      <parameter id="krelAktProt" metaid="_840412" value="1E-8" sboTerm="SBO:0000009"/>
+      <parameter id="kdegAkt" metaid="_840413" value="0.01" sboTerm="SBO:0000009"/>
+      <parameter id="kbinCHIP" metaid="_840414" value="2E-7" sboTerm="SBO:0000009"/>
+      <parameter id="krelCHIP" metaid="_840416" value="1E-8" sboTerm="SBO:0000009"/>
+      <parameter id="ksynMkp1" metaid="_840417" value="1E-5" sboTerm="SBO:0000009"/>
+      <parameter id="kbinMkp1Prot" metaid="_840418" value="9.6E-9" sboTerm="SBO:0000009"/>
+      <parameter id="kdegMkp1" metaid="_840419" value="0.01" sboTerm="SBO:0000009"/>
+      <parameter id="kphosMkp1" metaid="_840421" value="0.02" sboTerm="SBO:0000009"/>
+      <parameter id="kdephosMkp1" metaid="_840422" value="0.001" sboTerm="SBO:0000009"/>
+      <parameter id="kgenROSp38" metaid="_840423" value="0.0001" sboTerm="SBO:0000009"/>
+      <parameter id="kdamHsp" metaid="_840425" value="1E-8" sboTerm="SBO:0000009"/>
+      <parameter id="kp38death" metaid="_840426" value="1.5E-7" sboTerm="SBO:0000009"/>
+      <parameter id="kJnkdeath" metaid="_840427" value="1.5E-7" sboTerm="SBO:0000009"/>
+      <parameter id="kPIdeath" metaid="_840429" value="2E-8" sboTerm="SBO:0000009"/>
+      <parameter id="kp38act" constant="false" metaid="_840430" value="1" sboTerm="SBO:0000009"/>
+      <parameter id="kalive" constant="false" metaid="_840431" value="1" sboTerm="SBO:0000009"/>
+      <parameter id="tot_Hsp90" constant="false" metaid="_840433" value="0"/>
+      <parameter id="tot_Hsp70" constant="false" metaid="_840434" value="0"/>
+      <parameter id="tot_MisP" constant="false" metaid="_840435" value="0"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_0000064" variable="tot_Hsp90">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <ci> Hsp90 </ci>
+            <ci> Hsp90_dam </ci>
+            <ci> Hsp90_Proteasome </ci>
+            <ci> Hsp90_Hsp90Client </ci>
+            <ci> Akt_Hsp90 </ci>
+            <ci> Akt_CHIP_Hsp90 </ci>
+            <ci> Hsf1_Hsp90 </ci>
+            <ci> Hsp90_MisP </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule metaid="metaid_0100064" variable="tot_Hsp70">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <ci> Hsp70 </ci>
+            <ci> Hsp70_dam </ci>
+            <ci> Hsp70_Proteasome </ci>
+            <ci> Hsp70_Hsp70Client </ci>
+            <ci> Hsp70_MisP </ci>
+            <ci> Hsp70_Ppx </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule metaid="metaid_0200064" variable="tot_MisP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <ci> MisP </ci>
+            <ci> Hsp70_MisP </ci>
+            <ci> Hsp90_MisP </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction id="ProteinSynthesis" metaid="_840144" reversible="false" sboTerm="SBO:0000284">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840144">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006412"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Source" metaid="a7905463-66d7-4d30-af4c-bbd459f19376"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NatP" metaid="_293c5486-e3fe-4bea-834a-10d1e4ddd967"/>
+        </listOfProducts>
+        <kineticLaw metaid="_28b5e0d6-0c2d-48ac-81a7-dc9847e8d5b8">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> ksynNatP </ci>
+              <ci> Source </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Misfolding" metaid="_840145" reversible="false" sboTerm="SBO:0000344">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840145">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0000302"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="NatP" metaid="da317d6b-a4b1-4845-af58-5ccdea175a33"/>
+          <speciesReference species="ROS" metaid="f3c5ebaf-8f90-48b9-96d2-df35cb7ff068"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MisP" metaid="_5aa371e7-2f64-4032-8676-00c5629e2290"/>
+          <speciesReference species="ROS" metaid="_8519ce65-1ea6-4c49-9882-b1878ae06863"/>
+        </listOfProducts>
+        <kineticLaw metaid="bdfedbaa-0312-4323-97e7-d186dbbcf048">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kmisfold </ci>
+              <ci> NatP </ci>
+              <ci> ROS </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90MisPBinding" metaid="_840146" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840146">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0051087"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="MisP" metaid="a82bb05b-2361-4ba2-b2b0-ca22544bdc2a"/>
+          <speciesReference species="Hsp90" metaid="_1324e397-2e3c-4213-83f0-769f62cb8cc3"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp90_MisP" metaid="_7dfbfc1d-25cb-4b4e-95ea-d782681bec66"/>
+        </listOfProducts>
+        <kineticLaw metaid="_6fe11d98-416a-438b-aa8e-e30c8e13d2f9">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHspMisp </ci>
+              <ci> MisP </ci>
+              <ci> Hsp90 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90unsuccessulRefolding" metaid="_840147" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840147">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070389"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90_MisP" metaid="_10402520-af94-4cc6-8714-3d1060e1e44a"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MisP" metaid="_871998ac-342b-4aa5-8073-b9c6bfcc0ae3"/>
+          <speciesReference species="Hsp90" metaid="e3620ede-6a05-455b-b930-d60006a325d6"/>
+        </listOfProducts>
+        <kineticLaw metaid="c76c86b9-b6ca-49f0-b67b-9a22eff1c625">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> krelHspMisp </ci>
+              <ci> Hsp90_MisP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90refolding" metaid="_840148" reversible="false" sboTerm="SBO:0000344">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840148">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070389"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90_MisP" metaid="fe5a8309-8c2d-46d3-97c0-9f48f0bd471f"/>
+          <speciesReference species="ATP" metaid="cd0d2385-ae74-43e3-9bdd-78ef25a4a927"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp90" metaid="_6bd18e76-a2cf-4f3b-8f33-d75721bf2620"/>
+          <speciesReference species="NatP" metaid="a2df440d-d28f-49f8-b48f-a70ccc9056b7"/>
+          <speciesReference species="ADP" metaid="_1f9956b3-f48d-4588-b4ae-0782090220ce"/>
+        </listOfProducts>
+        <kineticLaw metaid="_6fb6ca4b-89b8-4c45-88e8-f7c7e806e345">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> krefold </ci>
+                <ci> Hsp90_MisP </ci>
+                <ci> kalive </ci>
+                <ci> ATP </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 5000 </cn>
+                <ci> ATP </ci>
+              </apply>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70MisPBinding" metaid="_840150" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840150">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0051087"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="MisP" metaid="bbd96c7d-fc0d-4f93-94f2-ca6883c28f8a"/>
+          <speciesReference species="Hsp70" metaid="aebeeea5-7832-4ccc-9128-64441f7dca81"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp70_MisP" metaid="a1c3e8c2-e17c-4a01-bf03-4d8e024a00c8"/>
+        </listOfProducts>
+        <kineticLaw metaid="_88fd16d7-981e-4337-b58f-126f7dde9be3">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHspMisp </ci>
+              <ci> MisP </ci>
+              <ci> Hsp70 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70unsuccessulRefolding" metaid="_840151" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840151">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070389"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70_MisP" metaid="_717be191-75be-4c0b-937d-b01ef4e71493"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MisP" metaid="e8edd398-1dd5-4096-b703-c6b79ae5feae"/>
+          <speciesReference species="Hsp70" metaid="_5ba5c621-eb0a-4569-a077-a711cc8b6fe7"/>
+        </listOfProducts>
+        <kineticLaw metaid="ec77accb-91b8-4808-8d01-a48c6bf8a534">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> krelHspMisp </ci>
+              <ci> Hsp70_MisP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70refolding" metaid="_840152" reversible="false" sboTerm="SBO:0000344">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840152">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070389"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70_MisP" metaid="_6464fe88-087e-453f-a07a-cf5bf622f666"/>
+          <speciesReference species="ATP" metaid="abf34801-4145-44a0-aed7-2b4d32de8617"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp70" metaid="f4d73a48-7386-4d82-9798-49b58e354147"/>
+          <speciesReference species="NatP" metaid="e0ca6077-662c-4a50-9c06-b6a1e0c00b87"/>
+          <speciesReference species="ADP" metaid="_82bb84b6-8bbe-40d7-926e-42b6efb14d88"/>
+        </listOfProducts>
+        <kineticLaw metaid="_9c7f655f-7e98-48aa-ae40-f5373ba73ebf">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> krefold </ci>
+                <ci> Hsp70_MisP </ci>
+                <ci> kalive </ci>
+                <ci> ATP </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 5000 </cn>
+                <ci> ATP </ci>
+              </apply>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70ClientBinding" metaid="_840153" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840153">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70" metaid="_7134d681-3391-4ae8-b0cb-3e446bdeb218"/>
+          <speciesReference species="Hsp70Client" metaid="f67ddeb6-d0e8-46e5-9b31-58b88acb605e"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp70_Hsp70Client" metaid="dae30d2c-e4b9-4f9e-8ef6-18cfed24b3fc"/>
+        </listOfProducts>
+        <kineticLaw metaid="_0b0bc85b-8d99-42c7-bf28-bc13f9c779f8">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHsp70client </ci>
+              <ci> Hsp70 </ci>
+              <ci> Hsp70Client </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70ClientRelease" metaid="_840155" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840155">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0032986"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70_Hsp70Client" metaid="_30725c4e-5669-4793-90cc-657a57ee6730"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp70" metaid="_3be54433-1941-4687-be52-d6c050502232"/>
+          <speciesReference species="Hsp70Client" metaid="_7b173cf3-d8ac-4c7e-b3aa-be056de17728"/>
+        </listOfProducts>
+        <kineticLaw metaid="_318bddd9-bf21-49d9-8892-c12509d570ba">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> krelHsp70client </ci>
+              <ci> Hsp70_Hsp70Client </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90ClientBinding" metaid="_840156" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840156">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90" metaid="_87aeb3fd-d220-45ae-8bdb-92f54f1a3c04"/>
+          <speciesReference species="Hsp90Client" metaid="_421ef14a-67a2-4a50-8813-82adb8a04cec"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp90_Hsp90Client" metaid="_5438505c-b6d7-4207-b69e-3cae3c487a9e"/>
+        </listOfProducts>
+        <kineticLaw metaid="f1bb7837-3a8b-4c96-9e29-e946f070906d">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHsp90client </ci>
+              <ci> Hsp90 </ci>
+              <ci> Hsp90Client </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90ClientRelease" metaid="_840157" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840157">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0032986"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90_Hsp90Client" metaid="_1cc1517c-b65a-46ab-9ea4-aa3809853f13"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp90" metaid="efe1b52c-385a-485c-8e53-238517022263"/>
+          <speciesReference species="Hsp90Client" metaid="_48d75abb-aed0-4dac-9487-923c5298db57"/>
+        </listOfProducts>
+        <kineticLaw metaid="_460216ec-e9b8-4262-8bcc-5d43a5ba87ca">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> krelHsp90client </ci>
+              <ci> Hsp90_Hsp90Client </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90HSF1Binding" metaid="_840159" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840159">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90" metaid="_0a2c8a21-f761-4f67-bd1a-7c061442def1"/>
+          <speciesReference species="Hsf1" metaid="_41b63539-1e6b-4048-9a84-0a65e82f6c85"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsf1_Hsp90" metaid="_3ea388be-7a28-4d4d-ba6f-900f3798cdf6"/>
+        </listOfProducts>
+        <kineticLaw metaid="_4403a4c2-f81c-471e-a554-b8231a59c803">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHsf1Hsp90 </ci>
+              <ci> Hsp90 </ci>
+              <ci> Hsf1 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90HSF1Release" metaid="_840160" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840160">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0032986"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsf1_Hsp90" metaid="add34a13-1df1-4180-9303-6893bec4de6f"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp90" metaid="b32a5ca0-1267-43d8-809d-e17858627a72"/>
+          <speciesReference species="Hsf1" metaid="_0daa0bb2-4521-4e06-ac07-c2acaa643248"/>
+        </listOfProducts>
+        <kineticLaw metaid="_84a0661b-8c5a-4647-974c-d7d11384a894">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> krelHsf1Hsp90 </ci>
+              <ci> Hsf1_Hsp90 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="dimerisation" metaid="_840161" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840161">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0042803"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsf1" metaid="d161f239-c17c-4323-ae44-2a99d573a87b" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsf1_Hsf1" metaid="_1257685b-d597-43fe-a3ea-2ebf0e1183f1"/>
+        </listOfProducts>
+        <kineticLaw metaid="_294ea07f-6091-4737-af05-f4ab385c062d">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <ci> Hsf1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <ci> kdimerHsf1 </ci>
+                <ci> kalive </ci>
+                <ci> Hsf1 </ci>
+              </apply>
+              <cn type="integer"> 2 </cn>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="trimerisation" metaid="_840163" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840163">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070206"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsf1" metaid="_141b9736-9316-4fc8-bca3-ba98ec64bf4a"/>
+          <speciesReference species="Hsf1_Hsf1" metaid="_93df78f1-39d1-4fa1-9396-04ae863936ed"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsf1_Hsf1_Hsf1" metaid="_5b9535fe-328b-4d54-b358-35a296e2b4a8"/>
+        </listOfProducts>
+        <kineticLaw metaid="_7f213401-9c6d-4c85-87e5-64e43500fa78">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> ktrimerHsf1 </ci>
+              <ci> Hsf1 </ci>
+              <ci> Hsf1_Hsf1 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="deTrimerisation" metaid="_840164" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840164">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070206"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsf1_Hsf1_Hsf1" metaid="f182e362-3aef-44bb-9262-f388af584beb"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsf1" metaid="ff4baf83-251c-492a-9d60-f70f2f7be4c5"/>
+          <speciesReference species="Hsf1_Hsf1" metaid="fa189a2b-88a1-406c-8e28-35d96a82e71a"/>
+        </listOfProducts>
+        <kineticLaw metaid="_038c52fc-7025-4dde-be65-05c088b1b822">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdetrimerHsf1 </ci>
+              <ci> Hsf1_Hsf1_Hsf1 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="deDimerisation" metaid="_840165" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840165">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0043241"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsf1_Hsf1" metaid="d32ad7ae-dc9a-4ff2-bd64-4f9bc2aa4af1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsf1" metaid="fca4afdb-d89b-4ab4-879b-625162e6ba61" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw metaid="_5ea709ed-e45c-4d05-9f58-147935f650f6">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdedimerHsf1 </ci>
+              <ci> Hsf1_Hsf1 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="HSE70TriHBinding" metaid="_840166" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840166">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsf1_Hsf1_Hsf1" metaid="cb4cb188-5158-41a4-a37c-70aeddda5c79"/>
+          <speciesReference species="HSEHsp70" metaid="_425a5ef8-d4b1-4a56-a797-b13465399139"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="HSEHsp70_Hsf1_Hsf1_Hsf1" metaid="bcf89f90-860e-42e6-8da6-6bd38e6fece4"/>
+        </listOfProducts>
+        <kineticLaw metaid="_130afcc2-ba05-4d26-9115-624a01ca9630">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHSEHsf1 </ci>
+              <ci> HSEHsp70 </ci>
+              <ci> Hsf1_Hsf1_Hsf1 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="HSE70TriHRelease" metaid="_840167" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840167">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0032986"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="HSEHsp70_Hsf1_Hsf1_Hsf1" metaid="eca20aa4-33c4-4c9e-9c52-51f0b1f28e2b"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="HSEHsp70" metaid="ce3b4016-80b4-411a-a248-9a87f3ac11f9"/>
+          <speciesReference species="Hsf1_Hsf1_Hsf1" metaid="_2c5be20c-6e86-4534-a8a9-880e62cd5e48"/>
+        </listOfProducts>
+        <kineticLaw metaid="d0c5d5ca-7716-4853-b407-464e35430284">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> krelHSEHsf1 </ci>
+              <ci> HSEHsp70_Hsf1_Hsf1_Hsf1 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="HSE90TriHBinding" metaid="_840169" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840169">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsf1_Hsf1_Hsf1" metaid="_99d5f062-d72c-4ad4-96d8-4e0c8148c78b"/>
+          <speciesReference species="HSEHsp90" metaid="_2cdcd1ec-2a01-4493-9dad-e4ed4dbd8c79"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="HSEHsp90_Hsf1_Hsf1_Hsf1" metaid="_83bbbcd5-26d0-4974-b537-68601828ca48"/>
+        </listOfProducts>
+        <kineticLaw metaid="cfe12ff8-d7ec-4f66-9eca-ddf09bf3a637">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHSEHsf1 </ci>
+              <ci> HSEHsp90 </ci>
+              <ci> Hsf1_Hsf1_Hsf1 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="HSE90TriHRelease" metaid="_840170" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840170">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0032986"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="HSEHsp90_Hsf1_Hsf1_Hsf1" metaid="f5e89b2a-c98d-4310-a37a-426d279eded4"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="HSEHsp90" metaid="_9d35e2b1-d476-4400-b878-2c1429bb3d38"/>
+          <speciesReference species="Hsf1_Hsf1_Hsf1" metaid="a600f23a-2bd4-42df-b462-9d3b8cdb3e2a"/>
+        </listOfProducts>
+        <kineticLaw metaid="f6b73986-cd29-442c-b4ca-2236855567a7">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> krelHSEHsf1 </ci>
+              <ci> HSEHsp90_Hsf1_Hsf1_Hsf1 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsf1_Hsf1_Hsf1Phosphorylation" metaid="_840171" reversible="false" sboTerm="SBO:0000216">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840171">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0016310"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsf1_Hsf1_Hsf1" metaid="bc5ff763-6774-4244-9497-d0ac3be39e61"/>
+          <speciesReference species="Pkc" metaid="_6023035f-3afd-40b1-86bc-5b969f0420e0"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsf1_Hsf1_Hsf1_P" metaid="_75bce8f6-f57a-46fd-81ae-a3675fcd427a"/>
+          <speciesReference species="Pkc" metaid="_54668fd8-4dfb-4c18-90a6-248da3da0207"/>
+        </listOfProducts>
+        <kineticLaw metaid="_2fafb2be-df65-47d8-9216-bddd69ae4629">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kphosHsf1 </ci>
+              <ci> Hsf1_Hsf1_Hsf1 </ci>
+              <ci> Pkc </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsf1_Hsf1_Hsf1DePhosphorylation" metaid="_840173" reversible="false" sboTerm="SBO:0000330">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840173">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0016311"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsf1_Hsf1_Hsf1_P" metaid="e5f10d0b-ceaf-46f7-924d-2784ac7fd012"/>
+          <speciesReference species="Hsp70_Ppx" metaid="_1b81886e-77ac-4d2b-9054-d5a75a75b99b"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsf1_Hsf1_Hsf1" metaid="ea3c8535-5806-4cc5-8277-a4789fe5ea82"/>
+          <speciesReference species="Hsp70_Ppx" metaid="cdf27c5f-8acd-4469-916a-c7ca0a0fec6a"/>
+        </listOfProducts>
+        <kineticLaw metaid="cd1567ec-a465-4807-afad-16748c0bd5a4">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdephosHsf1 </ci>
+              <ci> Hsf1_Hsf1_Hsf1_P </ci>
+              <ci> Hsp70_Ppx </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="HSE70PhosTriHBinding" metaid="_840174" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840174">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsf1_Hsf1_Hsf1_P" metaid="_9165c54b-1b96-4d98-aabb-3392ea669777"/>
+          <speciesReference species="HSEHsp70" metaid="_80440e26-c910-4e04-bae8-b975bc0f83dc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="HSEHsp70_Hsf1_Hsf1_Hsf1_P" metaid="_0bb7be15-2931-41f1-b8df-f533e4a686db"/>
+        </listOfProducts>
+        <kineticLaw metaid="_8bb2da85-ac2d-47ac-acec-ab4f601ee731">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHSEPhosTriH </ci>
+              <ci> HSEHsp70 </ci>
+              <ci> Hsf1_Hsf1_Hsf1_P </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="HSE70PhosTriHRelease" metaid="_840175" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840175">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0032986"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="HSEHsp70_Hsf1_Hsf1_Hsf1_P" metaid="_673b075b-b9f5-4d98-b74d-c9c90ed8b364"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsf1_Hsf1_Hsf1_P" metaid="e9af4258-c864-4a2a-8d08-5bb9f79486e9"/>
+          <speciesReference species="HSEHsp70" metaid="ad10c1b3-934d-434b-a5eb-b90fe142cd44"/>
+        </listOfProducts>
+        <kineticLaw metaid="e52f2eef-df54-48fe-ba63-09ee761424da">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> krelHSEPhosTriH </ci>
+              <ci> HSEHsp70_Hsf1_Hsf1_Hsf1_P </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="HSE90PhosTriHBinding" metaid="_840177" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840177">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsf1_Hsf1_Hsf1_P" metaid="_536eb27e-7119-448e-adea-d0ca45b82dc3"/>
+          <speciesReference species="HSEHsp90" metaid="_937a600d-c8c3-4443-a37b-a190b2fe9ca2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="HSEHsp90_Hsf1_Hsf1_Hsf1_P" metaid="_00f28637-89e5-4567-9baf-b5c0929f7d90"/>
+        </listOfProducts>
+        <kineticLaw metaid="d68a4cc3-5a8b-445d-bcdc-6551e40b7413">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHSEPhosTriH </ci>
+              <ci> HSEHsp90 </ci>
+              <ci> Hsf1_Hsf1_Hsf1_P </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="HSE90PhosTriHRelease" metaid="_840178" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840178">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0032986"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="HSEHsp90_Hsf1_Hsf1_Hsf1_P" metaid="_6a2a943f-11ea-4818-95da-5fc338d57474"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsf1_Hsf1_Hsf1_P" metaid="_9dba3c67-119a-4e5a-89c9-f45e177d0142"/>
+          <speciesReference species="HSEHsp90" metaid="f0790224-d307-45cb-b3fb-8824774cd68c"/>
+        </listOfProducts>
+        <kineticLaw metaid="_8e0c4a75-32d3-40c3-982e-1856fbe30ebb">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> krelHSEPhosTriH </ci>
+              <ci> HSEHsp90_Hsf1_Hsf1_Hsf1_P </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90BasalSynthesis" metaid="_840179" reversible="false" sboTerm="SBO:0000184">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840179">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006412"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Source" metaid="d11aba99-a25b-462d-b1f3-de6fea9b2b3f"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp90" metaid="_01a55986-9357-46b5-a0c6-6b01ccd2f288"/>
+        </listOfProducts>
+        <kineticLaw metaid="b0766fc4-3ad6-4e79-be44-fa20f6b4cc00">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbasalsynHsp90 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90Upregulation" metaid="_840181" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840181">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0032092"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="HSEHsp90_Hsf1_Hsf1_Hsf1_P" metaid="_5e59e02d-c400-403f-82b1-5503d5596fcc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="HSEHsp90_Hsf1_Hsf1_Hsf1_P" metaid="_54524e07-c41d-4335-b2a0-66998c895320"/>
+          <speciesReference species="Hsp90" metaid="c9f33642-a5fe-4d88-b419-f59aa313a950"/>
+        </listOfProducts>
+        <kineticLaw metaid="_4ce33f61-8ec4-477b-9c58-054dde8b99b3">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kupregHsp </ci>
+              <ci> HSEHsp90_Hsf1_Hsf1_Hsf1_P </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90ProteasomeBinding" metaid="_840182" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840182">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90" metaid="_3d3a3b64-dcd3-4754-854f-fb25686040a7"/>
+          <speciesReference species="Proteasome" metaid="b69e831e-9e5a-4f80-b511-f21819ccd140"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp90_Proteasome" metaid="_0a9d8ff1-12d9-4273-bee9-cc3d45bdb69c"/>
+        </listOfProducts>
+        <kineticLaw metaid="_699ccbf6-be8a-4a93-9098-9477ff68c053">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHsp90Prot </ci>
+              <ci> Hsp90 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90Degradation" metaid="_840183" reversible="false" sboTerm="SBO:0000179">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840183">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0009056"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90_Proteasome" metaid="_2d308a32-03e4-478f-a192-f6ac509ecbdc"/>
+          <speciesReference species="ATP" metaid="_480b0917-5538-43c0-a390-438a2be48024"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Proteasome" metaid="_83b3d074-8335-4c4c-96fe-729e8d568389"/>
+          <speciesReference species="ADP" metaid="ce38a64b-7acd-4a67-beef-17157356185d"/>
+        </listOfProducts>
+        <kineticLaw metaid="_3940d107-a58f-4154-a3ae-d5d5e19b66fe">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> kdegHsp90 </ci>
+                <ci> Hsp90_Proteasome </ci>
+                <ci> kalive </ci>
+                <ci> ATP </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 5000 </cn>
+                <ci> ATP </ci>
+              </apply>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70BasalSynthesis" metaid="_840185" reversible="false" sboTerm="SBO:0000184">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840185">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006412"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Source" metaid="aa7732b0-077a-40be-b2dd-1905e2e4f826"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp70" metaid="_2d45293f-a3d5-4ecb-9e0c-e89503039dc1"/>
+        </listOfProducts>
+        <kineticLaw metaid="d961654c-6127-44e4-a8d3-be2328e6f22f">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbasalsynHsp70 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70Upregulation" metaid="_840186" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840186">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0032092"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="HSEHsp70_Hsf1_Hsf1_Hsf1_P" metaid="_51b1f431-064e-4b5c-a827-cf88bb57c8d4"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="HSEHsp70_Hsf1_Hsf1_Hsf1_P" metaid="b33c72ff-7fa9-4e73-a47c-d11c45b61d6a"/>
+          <speciesReference species="Hsp70" metaid="bf20b91b-f525-4994-a6a0-03c9300cce60"/>
+        </listOfProducts>
+        <kineticLaw metaid="_34deadc0-33da-4534-a406-08870aff3530">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kupregHsp </ci>
+              <ci> HSEHsp70_Hsf1_Hsf1_Hsf1_P </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70ProteasomeBinding" metaid="_840187" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840187">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70" metaid="_2760436e-9c3e-43d0-9b12-e28f466aa2d8"/>
+          <speciesReference species="Proteasome" metaid="_9cbfb297-15ad-4223-8aa7-e92f3a10d124"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp70_Proteasome" metaid="_0a950543-03ec-4612-9276-423f706e693e"/>
+        </listOfProducts>
+        <kineticLaw metaid="_81e7d1e5-acc8-46fb-986d-a55e5116a8fe">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHsp70Prot </ci>
+              <ci> Hsp70 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70Degradation" metaid="_840189" reversible="false" sboTerm="SBO:0000179">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840189">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0009056"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70_Proteasome" metaid="_219bb3fe-add3-49ee-bd67-eeb953522fea"/>
+          <speciesReference species="ATP" metaid="_3a6c1f3e-55cf-4b84-8529-ffe408f258dd"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Proteasome" metaid="_7d47392f-0085-4439-a319-1551e950a5d2"/>
+          <speciesReference species="ADP" metaid="_3d6ae943-d932-42d1-8bbc-c82b1b332920"/>
+        </listOfProducts>
+        <kineticLaw metaid="f19f2d68-fc8b-4198-9b21-11f1bed7a14a">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> kdegHsp70 </ci>
+                <ci> Hsp70_Proteasome </ci>
+                <ci> kalive </ci>
+                <ci> ATP </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 5000 </cn>
+                <ci> ATP </ci>
+              </apply>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="MisPProteasomeBinding1" metaid="_840190" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840190">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070628"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70_MisP" metaid="c173a973-c9dc-4d6c-9526-0d772101c256"/>
+          <speciesReference species="Proteasome" metaid="_64c17ac3-76fd-47fd-bf5a-cc840f20a44e"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MisP_Proteasome" metaid="_194609d8-48a6-41de-9625-e4f3e5c1d584"/>
+          <speciesReference species="Hsp70" metaid="bb163d29-97cd-4c3b-a5dc-2c22bcb01b80"/>
+        </listOfProducts>
+        <kineticLaw metaid="_206b8426-1952-43c7-ab95-45646e907cf7">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinMisPProt </ci>
+              <ci> Hsp70_MisP </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="MisPProteasomeBinding2" metaid="_840191" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840191">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070628"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90_MisP" metaid="e1e9423c-9afa-4690-8ca9-dd83c4cceb19"/>
+          <speciesReference species="Proteasome" metaid="_63870986-4ae8-4eb7-8e3e-41731b6fbfad"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MisP_Proteasome" metaid="c34aaa1d-723b-4b5e-bf4b-e0cdb2ea9fd7"/>
+          <speciesReference species="Hsp90" metaid="_1e40ed18-8e17-4f77-81ae-84eb29bbabb3"/>
+        </listOfProducts>
+        <kineticLaw metaid="_1b7dda15-eb18-45d4-9344-54593b5c5643">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinMisPProt </ci>
+              <ci> Hsp90_MisP </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="MisPDegradation" metaid="_840193" reversible="false" sboTerm="SBO:0000179">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840193">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0009056"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="MisP_Proteasome" metaid="_2142984c-bc02-402d-bde0-a313ac55ab03"/>
+          <speciesReference species="ATP" metaid="_700f0545-2b77-4a15-ae51-059464e0cd42"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Proteasome" metaid="_22917182-c145-46e2-b10f-c2be49a4064d"/>
+          <speciesReference species="ADP" metaid="_9af5d0ee-8cf9-4169-b644-53a94b9c67ef"/>
+        </listOfProducts>
+        <kineticLaw metaid="efb364de-22d5-426f-a2c9-86bd41b4768d">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> kdegMisP </ci>
+                <ci> MisP_Proteasome </ci>
+                <ci> kalive </ci>
+                <ci> ATP </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 5000 </cn>
+                <ci> ATP </ci>
+              </apply>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="radicalFormation" name="radicalFormation" metaid="_840194" reversible="false" sboTerm="SBO:0000393">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840194">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0009058"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Source" metaid="_80652d34-94e4-4deb-b98f-a9bfc1966cd8"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ROS" metaid="_7a69c929-4d80-4131-bb12-75c897e44295"/>
+        </listOfProducts>
+        <kineticLaw metaid="_5930d748-adb8-43b7-bea3-e68ffbbbe547">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kgenROS </ci>
+              <ci> Source </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="radicalScavenging" name="radicalScavenging" metaid="_840195" reversible="false" sboTerm="SBO:0000179">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840195">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0009056"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="ROS" metaid="_5a91c772-28d8-47d8-a1dd-4790f7b0edd5"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sink" metaid="bd8af2fe-fc58-486d-87b1-dc740c608ca8"/>
+        </listOfProducts>
+        <kineticLaw metaid="_5dfac899-2d0b-44de-86b3-143566a2eeb5">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kremROS </ci>
+              <ci> ROS </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70_PpxBinding" metaid="_840196" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840196">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70" metaid="de3dcf8d-1722-47ee-bf00-bb47fc7eb380"/>
+          <speciesReference species="Ppx" metaid="f408d6b3-d9ae-4a78-919c-5e7b42f2fe32"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp70_Ppx" metaid="_361523f7-7b09-4906-bf41-6c8590a099ff"/>
+        </listOfProducts>
+        <kineticLaw metaid="_38ba7a06-882d-4615-a8de-d1417c1389c6">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHsp70Ppx </ci>
+              <ci> Hsp70 </ci>
+              <ci> Ppx </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70_PPXRelease" metaid="_840198" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840198">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0043241"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70_Ppx" metaid="_58279101-7280-4468-b7ce-6b4c3a8229ab"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp70" metaid="e85c8094-8d49-4375-b9a1-1c774d9d856a"/>
+          <speciesReference species="Ppx" metaid="ed03f017-274d-47fd-b97b-546ac93b512a"/>
+        </listOfProducts>
+        <kineticLaw metaid="fc6be6b2-7462-4a8b-ad58-045f0fa9d831">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> krelHsp70Ppx </ci>
+              <ci> Hsp70_Ppx </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="JnkPhosphorylation" metaid="_840199" reversible="false" sboTerm="SBO:0000216">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840199">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0016310"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="ROS" metaid="_7c21749a-f6ad-4fe5-bb4d-54423245b437"/>
+          <speciesReference species="Jnk" metaid="d8d340dd-69e4-4826-b427-b4443062b9d6"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ROS" metaid="_62f0d206-8d4f-4650-91f4-1dc3510b51cb"/>
+          <speciesReference species="Jnk_P" metaid="_6fa3aa8d-e1e6-4190-a95b-9c8510ab0313"/>
+        </listOfProducts>
+        <kineticLaw metaid="_716bf14c-7981-4cb3-a1bc-a8674930d34c">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kphosJnk </ci>
+              <ci> Jnk </ci>
+              <ci> ROS </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="JNKDephosphorylatioByMkp1" metaid="_840200" reversible="false" sboTerm="SBO:0000330">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840200">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0016311"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Jnk_P" metaid="_8f8ed9c9-cbf1-4a2a-8bc0-af677c4b5165"/>
+          <speciesReference species="Mkp1_P" metaid="_98a9d57b-6aaf-499a-81c6-110571ccfd7d"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Jnk" metaid="_65001ac9-4f2c-4e55-bf65-c6265fea53f1"/>
+          <speciesReference species="Mkp1_P" metaid="_4d8974cb-a408-4316-920e-3f2b6266fb1b"/>
+        </listOfProducts>
+        <kineticLaw metaid="fedf22b2-0568-4f29-87c2-07471e85bd20">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdephosJnkMkp1 </ci>
+              <ci> Jnk_P </ci>
+              <ci> Mkp1_P </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="p38Phosphorylation" metaid="_840201" reversible="false" sboTerm="SBO:0000216">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840201">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0016310"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="ROS" metaid="d60973d7-0698-48dd-b444-e7f1c5656d9f"/>
+          <speciesReference species="p38" metaid="_4b891ae7-544e-4415-b357-6d98203aca0c"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ROS" metaid="_9f868fa4-46c6-4670-a6ab-9e8b8f1fbe44"/>
+          <speciesReference species="p38_P" metaid="_2cd5c198-e463-4084-b07c-cc0477063c72"/>
+        </listOfProducts>
+        <kineticLaw metaid="_07c7445d-18e2-4869-8f1e-bc96d105ab5c">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kphosp38 </ci>
+              <ci> ROS </ci>
+              <ci> p38 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="p38DePhosphorylationByMkp1" metaid="_840203" reversible="false" sboTerm="SBO:0000330">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840203">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0016311"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="p38_P" metaid="_25955fad-38a4-47d4-ad89-2edbd126bcdc"/>
+          <speciesReference species="Mkp1_P" metaid="_0c39cb8d-f9be-41d1-b92f-8d1014ea18a6"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="p38" metaid="_8a995a1d-cf51-47f4-a91c-1004c55b9397"/>
+          <speciesReference species="Mkp1_P" metaid="_8eeac040-a40c-4e77-a729-e5052c0b9002"/>
+        </listOfProducts>
+        <kineticLaw metaid="_02993b47-4354-4d10-8957-995b8eed2dde">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdephosp38Mkp1 </ci>
+              <ci> p38_P </ci>
+              <ci> Mkp1_P </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Aggregation1" metaid="_840204" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840204">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070841"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="MisP" metaid="_98c8474a-cad1-446e-b297-5b3d9d869773" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AggP" metaid="_79840851-e4f2-4d32-9783-2e215004de80"/>
+        </listOfProducts>
+        <kineticLaw metaid="_1d913cc0-8a37-4642-bbab-828027625fde">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kagg </ci>
+              <ci> MisP </ci>
+              <apply>
+                <minus/>
+                <ci> MisP </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+              <cn> 0.5 </cn>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="SequesteringOfAggregate" metaid="_840205" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840205">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0051235"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="MisP" metaid="f48f1b8b-35cb-4942-9bcd-d9dcca6ff8e4"/>
+          <speciesReference species="AggP" metaid="_5f29fadb-ed22-4cc4-ab19-b4430bf92ff4"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SeqAggP" metaid="_6c567ef5-7163-4282-8fb6-e24dbaa43bd5"/>
+        </listOfProducts>
+        <kineticLaw metaid="_305efc27-755d-4bbe-9d68-43e30f631428">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kagg </ci>
+              <ci> MisP </ci>
+              <ci> AggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="InclusionGrowth" metaid="_840207" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840207">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0090261"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="SeqAggP" metaid="_7b694f68-31ab-462b-b6d6-455f8222c8e8"/>
+          <speciesReference species="MisP" metaid="dd25fd1b-aad4-4401-bb9d-594007f3b508"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SeqAggP" metaid="b551329d-78f8-40db-b316-c7790fcbf67f" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw metaid="d00481a4-b744-42bb-8c90-13eb2e34ebfe">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kseqagg </ci>
+              <ci> SeqAggP </ci>
+              <ci> MisP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="ProteasomeInhibtion" metaid="_840208" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840208">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="AggP" metaid="d8cc9c60-58b8-4f8a-9afd-45cf21762ebb"/>
+          <speciesReference species="Proteasome" metaid="ce8267cd-f0d1-43f6-a46e-6d31f87f3c11"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AggP_Proteasome" metaid="_50076b28-a6b2-42a6-85b4-870e29e33ba7"/>
+        </listOfProducts>
+        <kineticLaw metaid="_7e889e9b-ddce-4d5c-adb1-d75fc9e75334">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinAggPProt </ci>
+              <ci> AggP </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="ROSgenerationSmallAggP" metaid="_840209" reversible="false" sboTerm="SBO:0000393">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840209">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0052064"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="AggP" metaid="_2c57b993-1163-49da-b59e-4707fbc7ae6f"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AggP" metaid="_2145d746-b49c-40f1-a506-a7399e177d1e"/>
+          <speciesReference species="ROS" metaid="_8c84f601-ba0c-4bd3-b88a-14ce5f5f5f99"/>
+        </listOfProducts>
+        <kineticLaw metaid="d8ba3ab9-b7a7-42fa-9915-940374910a05">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kgenROSAggP </ci>
+              <ci> AggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="ROSgenerationAggPProteasome" metaid="_840211" reversible="false" sboTerm="SBO:0000393">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840211">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0052064"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="AggP_Proteasome" metaid="c1f69513-91fa-4067-b113-be77f34c3eee"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AggP_Proteasome" metaid="a1c1bba1-939e-4b18-aa98-ac11a80808af"/>
+          <speciesReference species="ROS" metaid="_6e357244-3ddb-4c18-9f7b-e379313a9782"/>
+        </listOfProducts>
+        <kineticLaw metaid="b6568aac-1c30-4f45-a100-420a8ff81bfe">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kgenROSAggP </ci>
+              <ci> AggP_Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="AktSynthesis" metaid="_840212" reversible="false" sboTerm="SBO:0000184">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840212">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006412"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Source" metaid="f1f9387e-279d-47a4-9944-7f6d02f68768"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Akt" metaid="_853eb72f-9d70-4610-9a95-6d58877d52c3"/>
+        </listOfProducts>
+        <kineticLaw metaid="_20f7ea13-0ec7-4790-8a93-924b8964f3aa">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> ksynAkt </ci>
+              <ci> Source </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90AktBinding" metaid="_840213" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840213">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90" metaid="bf495054-a1b4-4f17-950c-fce8f44304b8"/>
+          <speciesReference species="Akt" metaid="_738b3ce1-ed60-4307-914f-2b738e7ce64e"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Akt_Hsp90" metaid="b17880fe-911f-46b3-8907-4afa5a880e92"/>
+        </listOfProducts>
+        <kineticLaw metaid="_46bc1f41-0721-4b7d-9269-7e9945324d76">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinAktHsp90 </ci>
+              <ci> Hsp90 </ci>
+              <ci> Akt </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90AktRelease" metaid="_840215" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840215">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0043241"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Akt_Hsp90" metaid="ef714a85-6d2b-4a10-b274-5e0b4fe7b2de"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Akt" metaid="_40e23c42-7dda-4fc5-916d-320ac5679cd7"/>
+          <speciesReference species="Hsp90" metaid="f1b5f320-a85a-4c27-b1cd-7bac018923b5"/>
+        </listOfProducts>
+        <kineticLaw metaid="_7140c0c2-7b3f-486a-b7b6-722f4b506412">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> krelAktHsp90 </ci>
+              <ci> Akt_Hsp90 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="CHIPbinding" metaid="_840216" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840216">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="CHIP" metaid="d02e526a-e539-4308-aa83-eea2dfface13"/>
+          <speciesReference species="Akt_Hsp90" metaid="_8d6beef2-7025-4664-a07d-a654752e574a"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Akt_CHIP_Hsp90" metaid="b03991e7-12bc-445f-af18-71d2a1cdce85"/>
+        </listOfProducts>
+        <kineticLaw metaid="_3db1e948-dfc2-4526-b82b-cc84f58f0ee9">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinCHIP </ci>
+              <ci> CHIP </ci>
+              <ci> Akt_Hsp90 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="CHIPrelease" metaid="_840217" reversible="false" sboTerm="SBO:0000526">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840217">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0043241"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Akt_CHIP_Hsp90" metaid="_81a812c2-e86f-486e-9681-4254f5173d2c"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CHIP" metaid="_24d166de-a22d-4ca6-85fe-7b4930943cc5"/>
+          <speciesReference species="Akt_Hsp90" metaid="_106a7496-5b88-4ea1-abc4-55e45604afcf"/>
+        </listOfProducts>
+        <kineticLaw metaid="_8871c4d7-5528-42f3-aef7-64e96e7f3971">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> krelCHIP </ci>
+              <ci> Akt_CHIP_Hsp90 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="AktProteasomeBinding" metaid="_840219" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840219">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070628"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Akt_CHIP_Hsp90" metaid="_77117520-aac1-4f80-a794-b0a171fec8cb"/>
+          <speciesReference species="Proteasome" metaid="_6950a0e9-7bcc-4394-9842-78444f166beb"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Akt_Proteasome" metaid="d62c8c1a-f6d3-48ea-9724-7b87fb399738"/>
+          <speciesReference species="CHIP" metaid="f6b5c171-1a79-484d-b0c3-f5e0ad6ffd3d"/>
+          <speciesReference species="Hsp90" metaid="_332d980e-b513-4696-b69e-ba9e79ad54e2"/>
+        </listOfProducts>
+        <kineticLaw metaid="_3f25c90f-83a8-4ce5-b5a9-47abe605c55f">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinAktProt </ci>
+              <ci> Akt_CHIP_Hsp90 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="AktProteasomeRelease" metaid="_840220" reversible="false" sboTerm="SBO:0000180">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840220">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0043241"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Akt_Proteasome" metaid="_4570274d-f639-42aa-980b-3443a7f8a436"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Akt" metaid="e003ba63-32ca-44ac-a2a5-40e3be03805a"/>
+          <speciesReference species="Proteasome" metaid="f1b8e240-1f8f-4024-9179-e45f3a767671"/>
+        </listOfProducts>
+        <kineticLaw metaid="b4ff3c22-3d0e-4029-8427-6a02a58afebb">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> krelAktProt </ci>
+              <ci> Akt_Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="AktDegradation" metaid="_840221" reversible="false" sboTerm="SBO:0000179">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840221">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0009056"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Akt_Proteasome" metaid="_149b4877-9be5-4972-95c2-e1429ba82e68"/>
+          <speciesReference species="ATP" metaid="_4e95d644-01ce-400b-bc47-d0c8f08431d0"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Proteasome" metaid="d0dfb1c3-9f93-4ead-8e64-212827a1d447"/>
+          <speciesReference species="ADP" metaid="fa0db556-b283-40d2-a581-96c3d4f3f951"/>
+        </listOfProducts>
+        <kineticLaw metaid="cd29a7fb-221c-456e-81e5-5c6f11227638">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> kdegAkt </ci>
+                <ci> Akt_Proteasome </ci>
+                <ci> kalive </ci>
+                <ci> ATP </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 5000 </cn>
+                <ci> ATP </ci>
+              </apply>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Mkp1Synthesis" metaid="_840223" reversible="false" sboTerm="SBO:0000184">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840223">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006412"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Source" metaid="_36c2cb2c-64bc-4b22-bc4b-14b05382024d"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Mkp1" metaid="b98303ec-e449-4834-afae-87cf3316f641"/>
+        </listOfProducts>
+        <kineticLaw metaid="_98d9f081-1b82-4090-bfbc-d061f0d67b8a">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> ksynMkp1 </ci>
+              <ci> Source </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Mkp1ProteasomeBinding" metaid="_840224" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840224">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Mkp1" metaid="_25ae6191-9b10-4df2-8760-29d8ea099e76"/>
+          <speciesReference species="Proteasome" metaid="_625a17b3-ef5f-4b2a-9e0c-ba259d95d303"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Mkp1_Proteasome" metaid="_4e4926d0-3894-40c0-ae44-1bfa10faa43f"/>
+        </listOfProducts>
+        <kineticLaw metaid="_1f95fdf5-797f-49d2-bec1-e65aa8271fd4">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinMkp1Prot </ci>
+              <ci> Mkp1 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Mkp1Degradation" metaid="_840225" reversible="false" sboTerm="SBO:0000179">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840225">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0009056"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Mkp1_Proteasome" metaid="c2b5caca-9fac-42e0-b0f8-347d50b5e643"/>
+          <speciesReference species="ATP" metaid="_07feb92d-88af-458f-a771-398526e321c5"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Proteasome" metaid="_7025b6bc-a272-40e2-afb1-f4db0f39c958"/>
+          <speciesReference species="ADP" metaid="_69d305bf-b178-4604-b57d-81c74c27ad3a"/>
+        </listOfProducts>
+        <kineticLaw metaid="dfa2b97e-ab45-42e6-954c-a4b1964c534c">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> kdegMkp1 </ci>
+                <ci> Mkp1_Proteasome </ci>
+                <ci> kalive </ci>
+                <ci> ATP </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 5000 </cn>
+                <ci> ATP </ci>
+              </apply>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Mkp1Phosphorylation" metaid="_840227" reversible="false" sboTerm="SBO:0000216">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840227">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0016310"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Mkp1" metaid="_67efe12f-9c30-4c4b-9198-003a19ef9a87"/>
+          <speciesReference species="Hsp70" metaid="_56d37161-ffd0-43e7-9dc1-da989b9b4d2e"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Mkp1_P" metaid="_6a51d121-6728-4b3a-af36-bf41f2ac9d21"/>
+          <speciesReference species="Hsp70" metaid="_5bf38ce9-a275-49c7-a75b-0e7e65dcdfca"/>
+        </listOfProducts>
+        <kineticLaw metaid="_042ac9b4-7562-4358-963e-56295db47509">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kphosMkp1 </ci>
+              <ci> Mkp1 </ci>
+              <ci> Hsp70 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Mkp1Dephosphorylation" metaid="_840228" reversible="false" sboTerm="SBO:0000330">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840228">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0016311"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Mkp1_P" metaid="_849cbb40-24c4-441c-9092-5cd9c19a1a23"/>
+          <speciesReference species="ROS" metaid="b6f96c1f-5607-4339-91b8-5dbf211ae1a9"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Mkp1" metaid="e7c065b2-1a88-4b4e-89d1-e11b0effa8b0"/>
+          <speciesReference species="ROS" metaid="_964fd131-b581-4913-82cb-612e98a8686d"/>
+        </listOfProducts>
+        <kineticLaw metaid="_722668bf-e2f9-4f9d-bf8b-8a43f9d19319">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdephosMkp1 </ci>
+              <ci> Mkp1_P </ci>
+              <ci> ROS </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="p38ROSproduction" metaid="_840229" reversible="false" sboTerm="SBO:0000393">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840229">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0052064"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="p38_P" metaid="_32168b55-a3cc-470f-a73a-962cea4b7b11"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="p38_P" metaid="_32fbd29d-c57a-4471-bec5-9596e4679488"/>
+          <speciesReference species="ROS" metaid="bdf1e578-943d-4d46-804b-40a74fb5e1bc"/>
+        </listOfProducts>
+        <kineticLaw metaid="d3345849-1d0b-447a-874f-d9e466fcb483">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kgenROSp38 </ci>
+              <ci> p38_P </ci>
+              <ci> kalive </ci>
+              <ci> kp38act </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70Damage" metaid="_840231" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840231">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006974"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70" metaid="_2a8edd08-5147-4d16-8278-0d1040ad73e9"/>
+          <speciesReference species="ROS" metaid="b12c2c8b-69eb-48a7-a9e2-dfd6a473fd79"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp70_dam" metaid="adc1a34c-528f-417c-becb-3781a592d413"/>
+          <speciesReference species="ROS" metaid="_663593de-e53a-41e1-a006-c25e3083fb8b"/>
+        </listOfProducts>
+        <kineticLaw metaid="_79a61242-ee03-47db-a88b-b56f2bbba240">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdamHsp </ci>
+              <ci> Hsp70 </ci>
+              <ci> ROS </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90Damage" metaid="_840232" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840232">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006974"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90" metaid="e5ef2990-fec5-471b-b48e-4e77fa654c5c"/>
+          <speciesReference species="ROS" metaid="b095673e-7a5d-4503-948c-9a4bd6a0bc3d"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp90_dam" metaid="bf65c4a5-0858-4620-a97d-32852069138b"/>
+          <speciesReference species="ROS" metaid="_225bf20d-7c8e-45e9-a3bf-053688807cd9"/>
+        </listOfProducts>
+        <kineticLaw metaid="a94b61af-289e-4536-8514-0ddd64c0c826">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdamHsp </ci>
+              <ci> Hsp90 </ci>
+              <ci> ROS </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70DamProteasomeBinding" metaid="_840233" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840233">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70_dam" metaid="b7d9827d-d876-43d4-ac7c-35a598678b83"/>
+          <speciesReference species="Proteasome" metaid="ad309f2d-4ad5-4f94-84c0-a7bc3c80ba1a"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp70_Proteasome" metaid="_26decd9c-f8f1-4b7b-aad3-3f79da83e61a"/>
+        </listOfProducts>
+        <kineticLaw metaid="_15ddee1b-81b5-4d32-85b4-663f7f35524a">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHsp70Prot </ci>
+              <ci> Hsp70_dam </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90DamProteasomeBinding" metaid="_840235" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840235">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006461"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90_dam" metaid="_2ab768c2-70d9-47e4-acc6-a552cd133b5b"/>
+          <speciesReference species="Proteasome" metaid="_6ed22f90-05aa-4782-865d-1bbe14cf1221"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Hsp90_Proteasome" metaid="cfb6be23-2c97-4677-b6df-b5e67dbf0bd8"/>
+        </listOfProducts>
+        <kineticLaw metaid="a6049f8a-daf7-401f-848e-7babc8a5acd6">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kbinHsp90Prot </ci>
+              <ci> Hsp90_dam </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70DamAggregation1" metaid="_840236" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840236">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070841"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70_dam" metaid="_2e6610b3-2cba-43b4-8ca1-4138fd292ebb" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AggP" metaid="d8394875-b57d-4c57-8adc-dcba3b288e54"/>
+        </listOfProducts>
+        <kineticLaw metaid="_4bf9c19d-cf82-4a25-917c-1289fb76289f">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kagg </ci>
+              <ci> Hsp70_dam </ci>
+              <apply>
+                <minus/>
+                <ci> Hsp70_dam </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+              <cn> 0.5 </cn>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70DamInclusionFormation" metaid="_840237" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840237">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070841"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70_dam" metaid="ce35fd7e-da61-42a7-8af1-21a8eace2437"/>
+          <speciesReference species="AggP" metaid="d7b4ccf6-0816-40e4-bcd0-18dbb0086590"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SeqAggP" metaid="c854adb5-c007-4cf6-bc2f-ffc37da147dc"/>
+        </listOfProducts>
+        <kineticLaw metaid="_87aaf10a-a24c-4b89-85d9-c6b77bfdbd26">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kagg </ci>
+              <ci> Hsp70_dam </ci>
+              <ci> AggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90DamAggregation" metaid="_840239" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840239">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070841"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90_dam" metaid="f34ab32f-3164-4428-bdfa-d40416a42e85" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AggP" metaid="_3d34de73-7010-4a19-acdd-04fe14aa09e3"/>
+        </listOfProducts>
+        <kineticLaw metaid="_81de522f-c7a3-4817-919b-96c0ab6f02ed">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kagg </ci>
+              <ci> Hsp90_dam </ci>
+              <apply>
+                <minus/>
+                <ci> Hsp90_dam </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+              <cn> 0.5 </cn>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90DamInclusionFormation" metaid="_840240" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840240">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0070841"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90_dam" metaid="c335193b-1391-4985-81af-c1f0f6e118cb"/>
+          <speciesReference species="AggP" metaid="_2fe387d7-3596-4388-949b-a72e2708526b"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SeqAggP" metaid="_6ec217d0-c091-4fd8-a19d-5f9b17b4465f"/>
+        </listOfProducts>
+        <kineticLaw metaid="ec3809f4-83e0-4db0-802d-c63a67ce51c2">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kagg </ci>
+              <ci> Hsp90_dam </ci>
+              <ci> AggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp70DamSequestering" metaid="_840241" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840241">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0051235"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp70_dam" metaid="_95d8c053-1c23-4924-8455-128c0a6f33f3"/>
+          <speciesReference species="SeqAggP" metaid="_5b3da083-6561-407a-8953-47c269dee8d7"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SeqAggP" metaid="_014f434c-9c4b-49d9-bb5a-bc3494b3cada" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw metaid="_9adaf3b8-9c77-4f8e-b88c-4f27bbd46ce1">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kseqagg </ci>
+              <ci> Hsp70_dam </ci>
+              <ci> SeqAggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="Hsp90DamSequestering" metaid="_840243" reversible="false" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840243">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0051235"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Hsp90_dam" metaid="ef8880c9-147b-44e3-9c48-5f15c028cf76"/>
+          <speciesReference species="SeqAggP" metaid="e0d20250-01be-4c02-9724-baa19d247a17"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SeqAggP" metaid="aa92ed68-bbc0-4b87-9830-52eafc6c9078" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw metaid="_2be3dbad-2f44-4eaf-9a38-96e45305766d">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kseqagg </ci>
+              <ci> Hsp90_dam </ci>
+              <ci> SeqAggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="p38CellDeath" metaid="_840244" reversible="false" sboTerm="SBO:0000179">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840244">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0008219"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="p38_P" metaid="_38d7bd73-124a-422f-8f6a-2dc287a9edaf"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="p38_P" metaid="_859d2834-c253-4e3a-b9d5-69681166c969"/>
+          <speciesReference species="p38Death" metaid="f8417e68-3605-43b8-a2dc-6df977ffd88f"/>
+          <speciesReference species="CellDeath" metaid="_38cd5bb7-8275-43e7-a119-eb21dec88d5f"/>
+        </listOfProducts>
+        <kineticLaw metaid="_203a53ff-5fbc-4821-8ca1-a545f6357ac7">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kp38death </ci>
+              <ci> p38_P </ci>
+              <ci> kalive </ci>
+              <ci> kp38act </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="JnkCellDeath" metaid="_840245" reversible="false" sboTerm="SBO:0000179">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840245">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0008219"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="Jnk_P" metaid="_65ccecb7-00d6-44c2-8cdf-40e61f9f5e55"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Jnk_P" metaid="_0867ea5d-dd44-4ed0-a62e-628d2e8cae39"/>
+          <speciesReference species="JNKDeath" metaid="ec762c7c-a72a-491c-bdc1-fbfd3f1baf07"/>
+          <speciesReference species="CellDeath" metaid="_304a48a5-711a-4f24-a7a4-397a6ca1f21c"/>
+        </listOfProducts>
+        <kineticLaw metaid="_9e9de64c-e9b3-486a-a283-50c3f1f68635">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kJnkdeath </ci>
+              <ci> Jnk_P </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="PICellDeath" metaid="_840247" reversible="false" sboTerm="SBO:0000179">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_840247">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0008219"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference species="AggP_Proteasome" metaid="_0d973968-38b3-48eb-8162-3d9ea07e1579"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AggP_Proteasome" metaid="cc9ba774-8813-4041-b504-e4aa1be385d2"/>
+          <speciesReference species="PIDeath" metaid="_4034499f-777b-4da6-bafa-631256013f7e"/>
+          <speciesReference species="CellDeath" metaid="_101d04bc-f2fb-45a1-8999-cdfd640ad84e"/>
+        </listOfProducts>
+        <kineticLaw metaid="f88541de-242e-49a4-9a8c-fb1fbf89e239">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kPIdeath </ci>
+              <ci> AggP_Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+    </listOfReactions>
+    <listOfEvents>
+      <event id="DeathOfCell" metaid="_840343">
+        <trigger metaid="_3bc2f4e5-4176-432b-b48f-89a17846d23b">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <geq/>
+              <ci> CellDeath </ci>
+              <cn> 1 </cn>
+            </apply>
+          </math>
+                </trigger>
+        <listOfEventAssignments>
+          <eventAssignment metaid="a199a921-7ec5-4fa0-8b87-2d58ef3e1df1" variable="kalive">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <cn type="integer"> 0 </cn>
+            </math>
+                    </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>
