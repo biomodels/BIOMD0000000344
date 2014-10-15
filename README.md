@@ -1,3 +1,21 @@
+# BIOMD0000000344: Hsp70Model
+
+## Installation
+
+Download this repository, and install with distutils
+
+`python setup.py install`
+
+Or, install using pip
+
+`pip install git+https://github.com/biomodels/BIOMD0000000344.git`
+
+To install a specific version (in this example, from the 2014-09-16 BioModels release)
+
+`pip install git+https://github.com/biomodels/BIOMD0000000344.git@20140916`
+
+
+# Model Notes
 
 
 This model is from the article:  
@@ -52,4 +70,5 @@ format as supporting files [go to Curation tab].
 
 Supplementary figures S3 (normal condition), S4 (moderate stress condition)
 and S6 (high stress condition) are reproduced here.
+
 
